@@ -225,7 +225,7 @@ class TicketsClass {
 					if (!result) {
 						return false
 					}
-				} else if (!(object[key] === filterVal[key])) {
+				} else if (!(object[key].toLowerCase() === filterVal[key].toLowerCase())) {
 					return false
 				}
 			}
