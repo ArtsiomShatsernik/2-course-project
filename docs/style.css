@@ -27,10 +27,67 @@ body {
 
 .search_block {
 	width: 100%;
-	height: 82%;
+	height: 20%;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #57ade6;
+}
+.table_block {
+	width: 80%;
+	height: 62%;
+	margin-left: 25px;
+	margin-right: auto;
+	background-color: #57ade6;
+	overflow: auto;
+	
+}
+.table_block table {
+  /* Устанавливаем ширину таблицы на 100% от родительского элемента */
+  width: 100%;
+  
+  /* Устанавливаем границы между ячейками таблицы */
+  border-collapse: collapse;
+}
+
+/* Стилизуем элементы заголовка таблицы */
+.table_block th {
+  /* Устанавливаем цвет фона для заголовка */
+  background-color: #f0f0f0;
+  /* Устанавливаем цвет текста для заголовка */
+  color: #333;
+  /* Устанавливаем высоту строки для заголовка */
+  height: 40px;
+  /* Устанавливаем границу снизу для заголовка */
+  border-bottom: 1px solid #ccc;
+}
+
+/* Стилизуем элементы тела таблицы */
+.table_block td {
+  /* Устанавливаем высоту строки для тела */
+  height: 30px;
+  /* Устанавливаем границу снизу для тела */
+  border-bottom: 1px solid #eee;
+  border: 1px solid #333333;
+  border-style: dashed;
+  border-color: #333333;
+}
+
+/* Стилизуем нечетные строки таблицы */
+.table_block tr:nth-child(odd) {
+  /* Устанавливаем цвет фона для нечетных строк */
+  background-color: #fafafa;
+}
+
+/* Стилизуем четные строки таблицы */
+.table_block tr:nth-child(even) {
+  /* Устанавливаем цвет фона для четных строк */
+  background-color: #ffffff;
+}
+
+/* Стилизуем строки таблицы при наведении курсора мыши */
+.table_block tr:hover {
+  /* Устанавливаем цвет фона для строки при наведении */
+  background-color: #e0e0e0;
 }
 
 .auth_block {
@@ -174,10 +231,14 @@ body {
 
 .auth_block button {
 	display: block;
-	margin: 5px auto 0;
-	padding: 5px;
-	width: 35%;
-	border-radius: 5px;
+	width: 180px;
+	height: 50px;
+	margin: 0 auto;
+	font-size: 20px;
+	background-color: #fff93d;
+	border-radius: 15px;
+	border: 2px solid black;
+	box-shadow: inset 6px 6px #d6d01a;
 }
 
 .auth_block button:hover {
