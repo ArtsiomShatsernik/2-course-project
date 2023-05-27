@@ -26,6 +26,7 @@ body {
 }
 
 .search_block {
+	display: flex;
 	width: 100%;
 	height: 20%;
 	margin-left: auto;
@@ -74,7 +75,7 @@ body {
 }
 
 .auth_block {
-	width: 350px;
+	width: 30%;
 	height: 140px;
 	float: left;
 	margin: 0 auto;
