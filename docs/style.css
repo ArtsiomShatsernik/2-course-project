@@ -21,7 +21,6 @@ body {
 .wrapper-left {
 	width: 70%;
 	height: 100%;
-	float: left;
 	text-align: center;
 }
 
@@ -77,7 +76,7 @@ body {
 .auth_block {
 	width: 30%;
 	height: 140px;
-	float: left;
+	
 	margin: 0 auto;
 	margin-top: 20px;
 	border-radius: 15px;
