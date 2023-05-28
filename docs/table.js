@@ -326,10 +326,11 @@ function changeTableOnClick(event) {
 	mainArray = new TicketsClass(TicketsStatic)
 	var filter = formFilterObject(inputValues[0], inputValues[1], inputValues[2], inputValues[3])
 	filtredArray = mainArray.getObjs(0, mainArray.Objs.length, filter)
-	formTableAndPlaceTable(filtredArray)
+	localStorage.setItem('savedTicketArray', JSON.stringify(filtredArray))
+	formAndPlaceTable(filtredArray)
 }
 var tableExistsFlag = 0
-function formTableAndPlaceTable(arrayName) {
+function formAndPlaceTable(arrayName) {
 	var container = document.querySelector(".table_block");
 	var table = document.createElement("table");
 	var thead = document.createElement("thead");
@@ -379,8 +380,11 @@ function formTableAndPlaceTable(arrayName) {
 		tableBlock.replaceChild(table, oldTable);
 	}
 }
-
-formTableAndPlaceTable(TicketsStatic)
+if (localStorage.getItem('savedTicketArray') === null) {
+	formAndPlaceTable(TicketsStatic)
+} else {
+	formAndPlaceTable(JSON.parse(localStorage.getItem('savedTicketArray')))
+}
 // Кнопка Найти
 const buttonElement = document.querySelector('.button-wrapper button');
 buttonElement.addEventListener('click', changeTableOnClick);
